@@ -1,4 +1,5 @@
 import React from "react";
+
 import { motion } from "framer-motion";
 
 import {
@@ -13,31 +14,52 @@ function Hero() {
 
   return (
 
-    <section className="hero-section" id="home">
+    <section
+      className="hero-section"
+      id="home"
+    >
 
-      {/* OVERLAY */}
+      {/* BACKGROUND OVERLAY */}
 
       <div className="hero-overlay"></div>
 
-      <div className="container">
+      {/* BLUR LIGHTS */}
+
+      <div className="hero-blur hero-blur-1"></div>
+      <div className="hero-blur hero-blur-2"></div>
+
+      <div className="container hero-container">
 
         <div className="row align-items-center min-vh-100">
 
-          {/* ================= LEFT ================= */}
+          {/* ================= LEFT CONTENT ================= */}
 
           <div className="col-lg-6">
 
             <motion.div
-              initial={{ opacity: 0, y: 70 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              className="hero-left"
+              initial={{
+                opacity: 0,
+                y: 60
+              }}
+              animate={{
+                opacity: 1,
+                y: 0
+              }}
+              transition={{
+                duration: 0.8
+              }}
             >
 
               {/* BADGE */}
 
               <div className="hero-badge">
 
-                Trusted Digital Partner For Modern Businesses
+                <CheckCircle2 />
+
+                <span>
+                  Trusted Digital Partner For Modern Businesses
+                </span>
 
               </div>
 
@@ -46,25 +68,37 @@ function Hero() {
               <h1 className="hero-title">
 
                 We Create
+                <br />
+
                 <span className="gradient-text">
-                  {" "}Powerful Digital Experiences
+                  Powerful Digital
                 </span>
-                {" "}That Help Businesses Grow Faster
+
+                <br />
+
+                Experiences That
+                <br />
+
+                Help Businesses
+                <br />
+
+                Grow Faster
 
               </h1>
 
-              {/* TEXT */}
+              {/* DESCRIPTION */}
 
               <p className="hero-text">
 
-                Immortrix Technologies delivers modern websites,
-                enterprise systems, mobile applications,
-                business automation and scalable IT solutions
-                designed to transform operations and drive growth.
+                Immortrix Technologies delivers
+                modern websites, enterprise systems,
+                mobile applications, business automation
+                and scalable IT solutions designed
+                to transform operations and drive growth.
 
               </p>
 
-              {/* FEATURES */}
+              {/* FEATURE LIST */}
 
               <div className="hero-features">
 
@@ -72,7 +106,9 @@ function Hero() {
 
                   <CheckCircle2 />
 
-                  <span>Custom Web Platforms</span>
+                  <span>
+                    Custom Web Platforms
+                  </span>
 
                 </div>
 
@@ -80,7 +116,9 @@ function Hero() {
 
                   <CheckCircle2 />
 
-                  <span>Business Automation Solutions</span>
+                  <span>
+                    Business Automation Solutions
+                  </span>
 
                 </div>
 
@@ -88,7 +126,9 @@ function Hero() {
 
                   <CheckCircle2 />
 
-                  <span>Modern Mobile Applications</span>
+                  <span>
+                    Modern Mobile Applications
+                  </span>
 
                 </div>
 
@@ -120,52 +160,35 @@ function Hero() {
 
               </div>
 
-              {/* STATS */}
-
-              <div className="hero-stats">
-
-                <div className="stat-card">
-
-                  <h3>Modern</h3>
-
-                  <p>Digital Solutions</p>
-
-                </div>
-
-                <div className="stat-card">
-
-                  <h3>24/7</h3>
-
-                  <p>Technical Support</p>
-
-                </div>
-
-                <div className="stat-card">
-
-                  <h3>Smart</h3>
-
-                  <p>Business Automation</p>
-
-                </div>
-
-              </div>
-
             </motion.div>
 
           </div>
 
-          {/* ================= RIGHT ================= */}
+          {/* ================= RIGHT VISUAL ================= */}
 
           <div className="col-lg-6">
 
             <motion.div
               className="hero-visual-container"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1 }}
+              initial={{
+                opacity: 0,
+                scale: 0.8
+              }}
+              animate={{
+                opacity: 1,
+                scale: 1
+              }}
+              transition={{
+                duration: 1
+              }}
             >
 
-              {/* MAIN GLOW */}
+              {/* ORBIT */}
+
+              <div className="orbit orbit-1"></div>
+              <div className="orbit orbit-2"></div>
+
+              {/* MAIN CIRCLE */}
 
               <div className="hero-main-glow">
 
@@ -175,7 +198,9 @@ function Hero() {
                     FUTURE READY
                   </span>
 
-                  <h2>IMMORTRIX</h2>
+                  <h2>
+                    IMMORTRIX
+                  </h2>
 
                   <p>
                     Digital Innovation
@@ -185,7 +210,7 @@ function Hero() {
 
               </div>
 
-              {/* CARD 1 */}
+              {/* FLOATING CARD 1 */}
 
               <motion.div
                 className="floating-card card-1"
@@ -206,7 +231,9 @@ function Hero() {
 
                 <div>
 
-                  <strong>Web Development</strong>
+                  <strong>
+                    Web Development
+                  </strong>
 
                   <p>
                     Responsive business websites
@@ -216,7 +243,7 @@ function Hero() {
 
               </motion.div>
 
-              {/* CARD 2 */}
+              {/* FLOATING CARD 2 */}
 
               <motion.div
                 className="floating-card card-2"
@@ -237,7 +264,9 @@ function Hero() {
 
                 <div>
 
-                  <strong>Enterprise Systems</strong>
+                  <strong>
+                    Enterprise Systems
+                  </strong>
 
                   <p>
                     ERP & workflow automation
@@ -247,7 +276,7 @@ function Hero() {
 
               </motion.div>
 
-              {/* CARD 3 */}
+              {/* FLOATING CARD 3 */}
 
               <motion.div
                 className="floating-card card-3"
@@ -268,7 +297,9 @@ function Hero() {
 
                 <div>
 
-                  <strong>Mobile Applications</strong>
+                  <strong>
+                    Mobile Applications
+                  </strong>
 
                   <p>
                     Android business solutions

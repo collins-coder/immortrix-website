@@ -8,7 +8,7 @@ import Services from "./components/Services";
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import WhyChooseUs from "./components/WhyChooseUs";
-import Testimonials from "./components/Testimonials";
+
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import StatsBanner from "./components/StatsBanner";
@@ -39,8 +39,6 @@ function LandingPage() {
       <Portfolio />
 
       <WhyChooseUs />
-      
-      <Testimonials />
       
       <Contact />
 

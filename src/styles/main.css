@@ -1615,3 +1615,125 @@ section {
     font-size: 32px;
   }
 }
+
+/* ================= FOOTER ================= */
+
+.footer-section {
+  background: linear-gradient(180deg, #050b16, #030712);
+  color: #cbd5e1;
+  padding: 80px 0 20px 0;
+  position: relative;
+}
+
+/* LOGO AREA */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.logo-circle {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  font-size: 18px;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+}
+
+.footer-logo h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.footer-logo span {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #60a5fa;
+}
+
+/* TEXT */
+.footer-text {
+  font-size: 14.5px;
+  line-height: 1.8;
+  color: #94a3b8;
+  margin-top: 10px;
+  max-width: 300px;
+}
+
+/* HEADINGS */
+.footer-heading {
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+/* LINKS */
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: #60a5fa;
+  padding-left: 5px;
+}
+
+/* LINE */
+.footer-line {
+  border-color: rgba(255, 255, 255, 0.08);
+  margin: 40px 0 20px 0;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* HOVER GLOW EFFECT */
+.footer-section::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: rgba(59, 130, 246, 0.12);
+  bottom: -150px;
+  right: -150px;
+  filter: blur(120px);
+  border-radius: 50%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .footer-text {
+    max-width: 100%;
+  }
+
+  .footer-logo {
+    justify-content: flex-start;
+  }
+}

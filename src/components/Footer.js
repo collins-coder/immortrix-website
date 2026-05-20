@@ -71,7 +71,7 @@ function Footer() {
             </p>
 
             <p className="footer-text">
-              info@immortrix.com
+              chirchircollins9@gmail.com
             </p>
 
           </div>

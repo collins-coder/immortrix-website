@@ -74,6 +74,10 @@ function Footer() {
               chirchircollins9@gmail.com
             </p>
 
+            <p className="footer-text">
+              +254723453289
+            </p>
+
           </div>
 
         </div>

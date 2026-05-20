@@ -3,7 +3,6 @@ import {
   Globe,
   Smartphone,
   Database,
-  Server,
   LayoutDashboard,
   ShieldCheck,
   ArrowRight

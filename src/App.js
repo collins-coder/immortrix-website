@@ -13,7 +13,6 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import StatsBanner from "./components/StatsBanner";
 import CTASection from "./components/CTASection";
-import WhatsappFloat from "./components/WhatsappFloat";
 import Loader from "./components/Loader";
 
 

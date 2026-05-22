@@ -1,8 +1,10 @@
 import React from "react";
+
 import {
   Mail,
   Phone,
-  MapPin
+  MapPin,
+  Send
 } from "lucide-react";
 
 function Contact() {
@@ -43,12 +45,9 @@ function Contact() {
 
                 <div>
                   <h6>Email</h6>
-                  <span>chirchircollins9@gmail.com</span>
-                </div>
-
-                <div>
-                  <h6>Phone</h6>
-                  <span>+254 723453289</span>
+                  <span>
+                    chirchircollins9@gmail.com
+                  </span>
                 </div>
 
               </div>
@@ -59,7 +58,12 @@ function Contact() {
                   <Phone />
                 </div>
 
-                
+                <div>
+                  <h6>Phone</h6>
+                  <span>
+                    +254 723 453 289
+                  </span>
+                </div>
 
               </div>
 
@@ -71,7 +75,9 @@ function Contact() {
 
                 <div>
                   <h6>Location</h6>
-                  <span>Nairobi, Kenya</span>
+                  <span>
+                    Nairobi, Kenya
+                  </span>
                 </div>
 
               </div>
@@ -86,53 +92,87 @@ function Contact() {
 
             <div className="contact-form-card">
 
-              <div className="row">
+              <form
+  action="https://formsubmit.co/chirchircollins9@gmail.com"
+  method="POST"
+>
 
-                <div className="col-md-6 mb-4">
+  <input
+    type="hidden"
+    name="_captcha"
+    value="false"
+  />
 
-                  <input
-                    type="text"
-                    className="form-control custom-input"
-                    placeholder="Full Name"
-                  />
+  <input
+    type="hidden"
+    name="_template"
+    value="table"
+  />
 
-                </div>
+  <div className="row">
 
-                <div className="col-md-6 mb-4">
+    <div className="col-md-6 mb-4">
 
-                  <input
-                    type="email"
-                    className="form-control custom-input"
-                    placeholder="Email Address"
-                  />
+      <input
+        type="text"
+        name="name"
+        className="form-control custom-input"
+        placeholder="Full Name"
+        required
+      />
 
-                </div>
+    </div>
 
-              </div>
+    <div className="col-md-6 mb-4">
 
-              <div className="mb-4">
+      <input
+        type="email"
+        name="email"
+        className="form-control custom-input"
+        placeholder="Email Address"
+        required
+      />
 
-                <input
-                  type="text"
-                  className="form-control custom-input"
-                  placeholder="Subject"
-                />
+    </div>
 
-              </div>
+  </div>
 
-              <div className="mb-4">
+  <div className="mb-4">
 
-                <textarea
-                  rows="6"
-                  className="form-control custom-input"
-                  placeholder="Your Message"
-                ></textarea>
+    <input
+      type="text"
+      name="subject"
+      className="form-control custom-input"
+      placeholder="Subject"
+      required
+    />
 
-              </div>
+  </div>
 
-              <button className="submit-btn">
-                Send Message
-              </button>
+  <div className="mb-4">
+
+    <textarea
+      rows="6"
+      name="message"
+      className="form-control custom-input"
+      placeholder="Your Message"
+      required
+    ></textarea>
+
+  </div>
+
+  <button
+    type="submit"
+    className="submit-btn d-flex align-items-center gap-2"
+  >
+
+    <Send size={18} />
+
+    Send Message
+
+  </button>
+
+</form>
 
             </div>
 

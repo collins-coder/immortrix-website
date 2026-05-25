@@ -14,36 +14,43 @@ function Services() {
     {
       icon: <Globe />,
       title: "Website Development",
-      desc: "Modern company websites, e-commerce platforms and responsive web applications."
+      desc: "Modern company websites, e-commerce platforms and responsive web applications.",
+      link: "/services/website-development"
     },
     {
       icon: <Smartphone />,
       title: "Mobile Applications",
-      desc: "Android and cross-platform mobile apps built for performance and scalability."
+      desc: "Android and cross-platform mobile apps built for performance and scalability.",
+      link: "/services/mobile-applications"
     },
     {
       icon: <Database />,
       title: "ERP & Business Systems",
-      desc: "Custom enterprise systems for sales, inventory, operations and automation."
+      desc: "Custom enterprise systems for sales, inventory, operations and automation.",
+      link: "/services/erp-business-systems"
     },
     {
       icon: <LayoutDashboard />,
       title: "UI/UX Design",
-      desc: "Professional interfaces focused on usability, aesthetics and user experience."
+      desc: "Professional interfaces focused on usability, aesthetics and user experience.",
+      link: "/services/ui-ux-design"
     },
     {
       icon: <ShieldCheck />,
       title: "IT Consultation",
-      desc: "Strategic technology guidance and digital transformation consulting."
+      desc: "Strategic technology guidance and digital transformation consulting.",
+      link: "/services/it-consultation"
     }
   ];
 
   return (
+
     <section className="services-section" id="services">
 
       <div className="container">
 
         {/* HEADER */}
+
         <div className="services-header text-center">
 
           <div className="section-badge">
@@ -62,6 +69,7 @@ function Services() {
         </div>
 
         {/* SERVICE GRID */}
+
         <div className="row mt-5">
 
           {services.map((service, index) => (
@@ -78,10 +86,16 @@ function Services() {
 
                 <p>{service.desc}</p>
 
-                <button className="service-btn">
+                <a
+                  href={service.link}
+                  className="service-btn"
+                >
+
                   Learn More
+
                   <ArrowRight size={18} />
-                </button>
+
+                </a>
 
               </div>
 
@@ -94,6 +108,7 @@ function Services() {
       </div>
 
     </section>
+
   );
 }
 

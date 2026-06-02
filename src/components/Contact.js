@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
   Mail,
@@ -8,6 +8,46 @@ import {
 } from "lucide-react";
 
 function Contact() {
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: ""
+  });
+
+  const handleChange = (e) => {
+
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+
+  };
+
+  const handleSubmit = (e) => {
+
+    e.preventDefault();
+
+    const whatsappMessage = `Hello Immortrix Technologies,
+
+Name: ${formData.name}
+
+Email: ${formData.email}
+
+Subject: ${formData.subject}
+
+Message:
+${formData.message}`;
+
+    const whatsappUrl =
+      `https://wa.me/254723453289?text=${encodeURIComponent(
+        whatsappMessage
+      )}`;
+
+    window.open(whatsappUrl, "_blank");
+
+  };
 
   return (
 
@@ -61,7 +101,7 @@ function Contact() {
                 <div>
                   <h6>Phone</h6>
                   <span>
-                    +254 723 453 289 or 
+                    +254 723 453 289 or
                     +254 715 175 279
                   </span>
                 </div>
@@ -93,87 +133,80 @@ function Contact() {
 
             <div className="contact-form-card">
 
-              <form
-  action="https://formsubmit.co/chirchircollins9@gmail.com"
-  method="POST"
->
+              <form onSubmit={handleSubmit}>
 
-  <input
-    type="hidden"
-    name="_captcha"
-    value="false"
-  />
+                <div className="row">
 
-  <input
-    type="hidden"
-    name="_template"
-    value="table"
-  />
+                  <div className="col-md-6 mb-4">
 
-  <div className="row">
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="form-control custom-input"
+                      placeholder="Full Name"
+                      required
+                    />
 
-    <div className="col-md-6 mb-4">
+                  </div>
 
-      <input
-        type="text"
-        name="name"
-        className="form-control custom-input"
-        placeholder="Full Name"
-        required
-      />
+                  <div className="col-md-6 mb-4">
 
-    </div>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="form-control custom-input"
+                      placeholder="Email Address"
+                      required
+                    />
 
-    <div className="col-md-6 mb-4">
+                  </div>
 
-      <input
-        type="email"
-        name="email"
-        className="form-control custom-input"
-        placeholder="Email Address"
-        required
-      />
+                </div>
 
-    </div>
+                <div className="mb-4">
 
-  </div>
+                  <input
+                    type="text"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    className="form-control custom-input"
+                    placeholder="Subject"
+                    required
+                  />
 
-  <div className="mb-4">
+                </div>
 
-    <input
-      type="text"
-      name="subject"
-      className="form-control custom-input"
-      placeholder="Subject"
-      required
-    />
+                <div className="mb-4">
 
-  </div>
+                  <textarea
+                    rows="6"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="form-control custom-input"
+                    placeholder="Your Message"
+                    required
+                  ></textarea>
 
-  <div className="mb-4">
+                </div>
 
-    <textarea
-      rows="6"
-      name="message"
-      className="form-control custom-input"
-      placeholder="Your Message"
-      required
-    ></textarea>
+                <button
+                  type="submit"
+                  className="submit-btn d-flex align-items-center gap-2"
+                >
 
-  </div>
+                  <Send size={18} />
 
-  <button
-    type="submit"
-    className="submit-btn d-flex align-items-center gap-2"
-  >
+                  Send Message
 
-    <Send size={18} />
+                </button>
 
-    Send Message
-
-  </button>
-
-</form>
+              </form>
 
             </div>
 
@@ -184,6 +217,7 @@ function Contact() {
       </div>
 
     </section>
+
   );
 }
 

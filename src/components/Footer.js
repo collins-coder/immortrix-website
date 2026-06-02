@@ -1,102 +1,116 @@
 import React from "react";
+import { FaWhatsapp } from "react-icons/fa";
 
 function Footer() {
 
   return (
 
-    <footer className="footer-section">
+    <>
+      <footer className="footer-section">
 
-      <div className="container">
+        <div className="container">
 
-        <div className="row">
+          <div className="row">
 
-          <div className="col-lg-4 mb-4">
+            <div className="col-lg-4 mb-4">
 
-            <div className="footer-logo">
+              <div className="footer-logo">
 
-              <div className="logo-circle">
-                I
+                <div className="logo-circle">
+                  I
+                </div>
+
+                <div>
+                  <h4>IMMORTRIX</h4>
+                  <span>TECHNOLOGIES</span>
+                </div>
+
               </div>
 
-              <div>
-                <h4>IMMORTRIX</h4>
-                <span>TECHNOLOGIES</span>
-              </div>
+              <p className="footer-text">
+                Modern IT solutions for businesses,
+                startups and enterprises.
+              </p>
 
             </div>
 
-            <p className="footer-text">
-              Modern IT solutions for businesses,
-              startups and enterprises.
-            </p>
+            <div className="col-lg-4 mb-4">
+
+              <h5 className="footer-heading">
+                Quick Links
+              </h5>
+
+              <ul className="footer-links">
+
+                <li>
+                  <a href="#home">Home</a>
+                </li>
+
+                <li>
+                  <a href="#services">Services</a>
+                </li>
+
+                <li>
+                  <a href="#about">About</a>
+                </li>
+
+                <li>
+                  <a href="#portfolio">Portfolio</a>
+                </li>
+
+              </ul>
+
+            </div>
+
+            <div className="col-lg-4 mb-4">
+
+              <h5 className="footer-heading">
+                Contact
+              </h5>
+
+              <p className="footer-text">
+                Nairobi, Kenya
+              </p>
+
+              <p className="footer-text">
+                chirchircollins9@gmail.com
+              </p>
+
+              <p className="footer-text">
+                +254723453289 or
+                +254715175279
+              </p>
+
+            </div>
 
           </div>
 
-          <div className="col-lg-4 mb-4">
+          <hr className="footer-line" />
 
-            <h5 className="footer-heading">
-              Quick Links
-            </h5>
+          <div className="footer-bottom">
 
-            <ul className="footer-links">
-
-              <li>
-                <a href="#home">Home</a>
-              </li>
-
-              <li>
-                <a href="#services">Services</a>
-              </li>
-
-              <li>
-                <a href="#about">About</a>
-              </li>
-
-              <li>
-                <a href="#portfolio">Portfolio</a>
-              </li>
-
-            </ul>
-
-          </div>
-
-          <div className="col-lg-4 mb-4">
-
-            <h5 className="footer-heading">
-              Contact
-            </h5>
-
-            <p className="footer-text">
-              Nairobi, Kenya
-            </p>
-
-            <p className="footer-text">
-              chirchircollins9@gmail.com
-            </p>
-
-            <p className="footer-text">
-              +254723453289 or 
-              +254715175279
+            <p>
+              © 2026 Immortrix Technologies.
+              All rights reserved.
             </p>
 
           </div>
 
         </div>
 
-        <hr className="footer-line" />
+      </footer>
 
-        <div className="footer-bottom">
+      {/* FLOATING WHATSAPP */}
 
-          <p>
-            © 2026 Immortrix Technologies.
-            All rights reserved.
-          </p>
-
-        </div>
-
-      </div>
-
-    </footer>
+      <a
+        href="https://wa.me/254723453289?text=Hello%20Immortrix%20Technologies"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="floating-whatsapp"
+      >
+        <FaWhatsapp />
+      </a>
+    </>
   );
 }
 

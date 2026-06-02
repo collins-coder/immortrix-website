@@ -75,7 +75,8 @@ function Footer() {
             </p>
 
             <p className="footer-text">
-              +254723453289
+              +254723453289 or 
+              +254715175279
             </p>
 
           </div>

@@ -61,7 +61,8 @@ function Contact() {
                 <div>
                   <h6>Phone</h6>
                   <span>
-                    +254 723 453 289
+                    +254 723 453 289 or 
+                    +254 715 175 279
                   </span>
                 </div>
 

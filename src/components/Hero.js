@@ -195,7 +195,7 @@ function Hero() {
                 <div className="hero-circle-content">
 
                   <span className="hero-small-text">
-                    FUTURE READY
+                    
                   </span>
 
                   <h2>

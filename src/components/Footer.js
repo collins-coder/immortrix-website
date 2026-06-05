@@ -55,7 +55,7 @@ function Footer() {
                 </li>
 
                 <li>
-                  <a href="#portfolio">Portfolio</a>
+                  <a href="#portfolio">Blog</a>
                 </li>
 
               </ul>

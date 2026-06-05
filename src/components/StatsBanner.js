@@ -4,10 +4,6 @@ function StatsBanner() {
 
   const stats = [
     {
-      number: "Endless",
-      label: "Projects Completed"
-    },
-    {
       number: "Scalable",
       label: "Business Solutions"
     },

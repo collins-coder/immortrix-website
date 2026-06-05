@@ -80,8 +80,8 @@ function Navbar() {
             </li>
 
             <li>
-              <a href="#portfolio">
-                Portfolio
+              <a href="#blog">
+                Blog
               </a>
             </li>
 
@@ -161,10 +161,10 @@ function Navbar() {
         </a>
 
         <a
-          href="#portfolio"
+          href="#blog"
           onClick={closeMenu}
         >
-          Portfolio
+          Blog
         </a>
 
         <a

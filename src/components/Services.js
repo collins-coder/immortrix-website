@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Globe,
   Smartphone,
@@ -10,36 +10,43 @@ import {
 
 function Services() {
 
+  const [expanded, setExpanded] = useState(null);
+
   const services = [
     {
       icon: <Globe />,
       title: "Website Development",
       desc: "Modern company websites, e-commerce platforms and responsive web applications.",
-      link: "/services/website-development"
+      fullText:
+        "We design and develop professional business websites, e-commerce platforms, customer portals and web applications that are fast, secure, mobile-friendly and optimized for growth."
     },
     {
       icon: <Smartphone />,
       title: "Mobile Applications",
       desc: "Android and cross-platform mobile apps built for performance and scalability.",
-      link: "/services/mobile-applications"
+      fullText:
+        "Our mobile solutions help businesses automate operations, improve customer engagement and provide services directly through Android and cross-platform applications."
     },
     {
       icon: <Database />,
       title: "ERP & Business Systems",
       desc: "Custom enterprise systems for sales, inventory, operations and automation.",
-      link: "/services/erp-business-systems"
+      fullText:
+        "We build enterprise systems that streamline sales, inventory management, procurement, finance and operational workflows while providing real-time reporting and analytics."
     },
     {
       icon: <LayoutDashboard />,
       title: "UI/UX Design",
       desc: "Professional interfaces focused on usability, aesthetics and user experience.",
-      link: "/services/ui-ux-design"
+      fullText:
+        "Our UI/UX design process focuses on creating intuitive, attractive and user-friendly interfaces that improve customer satisfaction and engagement."
     },
     {
       icon: <ShieldCheck />,
       title: "IT Consultation",
       desc: "Strategic technology guidance and digital transformation consulting.",
-      link: "/services/it-consultation"
+      fullText:
+        "We provide expert IT consultation to help organizations adopt the right technologies, improve efficiency, strengthen security and accelerate digital transformation."
     }
   ];
 
@@ -48,8 +55,6 @@ function Services() {
     <section className="services-section" id="services">
 
       <div className="container">
-
-        {/* HEADER */}
 
         <div className="services-header text-center">
 
@@ -68,8 +73,6 @@ function Services() {
 
         </div>
 
-        {/* SERVICE GRID */}
-
         <div className="row mt-5">
 
           {services.map((service, index) => (
@@ -86,16 +89,28 @@ function Services() {
 
                 <p>{service.desc}</p>
 
-                <a
-                  href={service.link}
+                {expanded === index && (
+                  <div className="mt-3">
+                    <p>{service.fullText}</p>
+                  </div>
+                )}
+
+                <button
                   className="service-btn"
+                  onClick={() =>
+                    setExpanded(
+                      expanded === index ? null : index
+                    )
+                  }
                 >
 
-                  Learn More
+                  {expanded === index
+                    ? "Show Less"
+                    : "Learn More"}
 
                   <ArrowRight size={18} />
 
-                </a>
+                </button>
 
               </div>
 

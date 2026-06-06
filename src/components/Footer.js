@@ -73,7 +73,7 @@ function Footer() {
               </p>
 
               <p className="footer-text">
-                chirchircollins9@gmail.com
+                immortrixtechnologies@gmail.com
               </p>
 
               <p className="footer-text">

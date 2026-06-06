@@ -86,7 +86,7 @@ ${formData.message}`;
                 <div>
                   <h6>Email</h6>
                   <span>
-                    chirchircollins9@gmail.com
+                    	immortrixtechnologies@gmail.com
                   </span>
                 </div>
 

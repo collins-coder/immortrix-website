@@ -44,18 +44,17 @@ function Navbar() {
 
           {/* LOGO */}
 
-          <a
-            href="#home"
-            className="navbar-logo"
-          >
+          <a href="#home" className="navbar-logo">
+  <img src={logo} alt="Immortrix Logo" className="logo-image" />
 
-            <img
-              src={logo}
-              alt="Immortrix Logo"
-              className="logo-image"
-            />
+  <div className="logo-text">
+    <span className="company-name">
+      IMMORTRIX<br />TECHNOLOGIES<br />LIMITED
+    </span>
+  </div>
+</a>
 
-          </a>
+         
 
           {/* DESKTOP NAVIGATION */}
 

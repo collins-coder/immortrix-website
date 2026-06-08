@@ -23,6 +23,8 @@ function Footer() {
                 <div>
                   <h4>IMMORTRIX</h4>
                   <span>TECHNOLOGIES</span>
+                  
+                  <span>LIMITED</span>
                 </div>
 
               </div>
@@ -90,7 +92,7 @@ function Footer() {
           <div className="footer-bottom">
 
             <p>
-              © 2026 Immortrix Technologies.
+              © 2026 Immortrix Technologies Limited.
               All rights reserved.
             </p>
 

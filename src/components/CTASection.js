@@ -2,12 +2,20 @@ import React from "react";
 
 function CTASection() {
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+
+    if (contactSection) {
+      contactSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
-
     <section className="cta-section">
-
       <div className="container">
-
         <div className="cta-card">
 
           <h2>
@@ -19,14 +27,15 @@ function CTASection() {
             enterprise systems and digital solutions together.
           </p>
 
-          <button className="cta-btn">
+          <button
+            className="cta-btn"
+            onClick={scrollToContact}
+          >
             Start Your Project
           </button>
 
         </div>
-
       </div>
-
     </section>
   );
 }

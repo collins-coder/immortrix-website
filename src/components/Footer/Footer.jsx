@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 import {
   FaWhatsapp,
   FaLinkedinIn,
@@ -32,45 +33,63 @@ function Footer() {
 
           <div className="footer-top">
 
-            {/* BRAND */}
+            {/* ================= BRAND ================= */}
 
             <div className="footer-brand">
 
               <Link to="/" className="footer-logo">
+
                 <img
                   src="/logo.jpg"
                   alt="Immortrix Technologies Limited"
                 />
+
               </Link>
+
 
               <p className="footer-description">
                 We build practical digital solutions that help modern
                 businesses work smarter, operate efficiently and grow.
               </p>
 
+
+              {/* SOCIAL LINKS */}
+
               <div className="footer-socials">
 
+                {/* LINKEDIN */}
+
                 <a
-                  href="#"
-                  aria-label="LinkedIn"
+                  href="https://www.linkedin.com/company/immortrix-technologies-limited"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Immortrix Technologies Limited on LinkedIn"
                   className="footer-social"
                 >
                   <FaLinkedinIn />
                 </a>
 
+
+                {/* FACEBOOK */}
+
                 <a
-                  href="#"
-                  aria-label="Facebook"
+                  href="https://www.facebook.com/profile.php?id=61592759667995"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Immortrix Technologies Limited on Facebook"
                   className="footer-social"
                 >
                   <FaFacebookF />
                 </a>
 
+
+                {/* WHATSAPP */}
+
                 <a
                   href="https://wa.me/254723453289"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="WhatsApp"
+                  aria-label="Chat with Immortrix Technologies on WhatsApp"
                   className="footer-social"
                 >
                   <FaWhatsapp />
@@ -181,10 +200,14 @@ function Footer() {
                 Let's discuss how technology can help.
               </p>
 
+
+              {/* EMAIL */}
+
               <a
                 href="mailto:immortrixtechnologies@gmail.com"
                 className="footer-contact-item"
               >
+
                 <span className="footer-contact-icon">
                   <Mail />
                 </span>
@@ -192,12 +215,17 @@ function Footer() {
                 <span>
                   immortrixtechnologies@gmail.com
                 </span>
+
               </a>
+
+
+              {/* PHONE */}
 
               <a
                 href="tel:+254723453289"
                 className="footer-contact-item"
               >
+
                 <span className="footer-contact-icon">
                   <Phone />
                 </span>
@@ -207,7 +235,11 @@ function Footer() {
                   <br />
                   +254 715 175 279
                 </span>
+
               </a>
+
+
+              {/* LOCATION */}
 
               <div className="footer-contact-item">
 
@@ -243,6 +275,7 @@ function Footer() {
 
             </div>
 
+
             <Link
               to="/contact"
               className="footer-cta-button"
@@ -263,6 +296,7 @@ function Footer() {
               All rights reserved.
             </p>
 
+
             <div className="footer-bottom-links">
 
               <a href="/">
@@ -276,6 +310,7 @@ function Footer() {
               </a>
 
             </div>
+
 
             <p className="footer-location">
               Trusted Digital Partner For Modern Businesses.

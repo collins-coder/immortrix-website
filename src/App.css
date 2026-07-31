@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  color: #2b1d35;
+  background: #ffffff;
+
+  overflow-x: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
+a {
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+
+/* =========================================================
+   WEBSITE LAYOUT
+========================================================= */
+
+.website-layout {
   min-height: 100vh;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  background: #ffffff;
 }
 
-.App-link {
-  color: #61dafb;
+
+/* =========================================================
+   PAGE CONTENT
+========================================================= */
+
+.page-content {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/* =========================================================
+   GLOBAL CONTAINER
+========================================================= */
+
+.container {
+  width: min(1200px, 92%);
+}
+
+
+/* =========================================================
+   GLOBAL SELECTION
+========================================================= */
+
+::selection {
+  background: #d9c2ee;
+  color: #281737;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .page-content {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
 }

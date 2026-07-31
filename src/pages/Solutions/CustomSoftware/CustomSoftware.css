@@ -1,0 +1,617 @@
+/* =========================================================
+   CUSTOM SOFTWARE PAGE
+========================================================= */
+
+.custom-software-page {
+  background: #ffffff;
+  color: #17152a;
+  overflow: hidden;
+}
+
+.custom-software-page .container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.solution-hero {
+  position: relative;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #17132b;
+}
+
+.solution-hero-image {
+  position: absolute;
+  inset: 0;
+  background-image: url("https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=2000&q=85");
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.02);
+}
+
+.solution-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(17, 13, 38, 0.96) 0%,
+      rgba(39, 24, 75, 0.88) 48%,
+      rgba(45, 23, 77, 0.55) 100%
+    );
+}
+
+.solution-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  padding: 150px 0 110px;
+}
+
+.solution-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 38px;
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+  font-size: 0.86rem;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.solution-back-link svg {
+  width: 17px;
+  height: 17px;
+}
+
+.solution-back-link:hover {
+  color: #ffffff;
+  transform: translateX(-4px);
+}
+
+.solution-eyebrow,
+.section-label {
+  display: inline-block;
+  color: #8f6bea;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.solution-hero .solution-eyebrow {
+  color: #c6b4ff;
+  margin-bottom: 22px;
+}
+
+.solution-hero h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(3rem, 6vw, 5.8rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  font-weight: 700;
+  max-width: 800px;
+}
+
+.solution-hero h1 span {
+  display: block;
+  color: #b79aff;
+}
+
+.solution-hero p {
+  max-width: 650px;
+  margin: 30px 0 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.solution-intro {
+  padding: 120px 0;
+  background: #ffffff;
+}
+
+.solution-intro-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.5fr;
+  gap: 90px;
+  align-items: start;
+}
+
+.solution-intro-heading h2 {
+  margin: 22px 0 0;
+  max-width: 480px;
+  font-size: clamp(2.3rem, 4vw, 4rem);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.solution-intro-heading h2 span,
+.solution-heading h2 span,
+.solution-process-content h2 span,
+.benefits-header h2 span {
+  color: #7651d6;
+}
+
+.solution-intro-content {
+  padding-top: 8px;
+}
+
+.solution-intro-content p {
+  margin: 0 0 24px;
+  color: #656274;
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+.solution-intro-content p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   CAPABILITIES
+========================================================= */
+
+.solution-capabilities {
+  padding: 120px 0;
+  background: #f7f5fb;
+}
+
+.solution-heading {
+  max-width: 760px;
+  margin-bottom: 60px;
+}
+
+.solution-heading h2 {
+  margin: 18px 0;
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.solution-heading p {
+  max-width: 650px;
+  margin: 0;
+  color: #6c6978;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.capability-card {
+  position: relative;
+  min-height: 270px;
+  padding: 38px;
+  background: #ffffff;
+  border: 1px solid #e8e3f2;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.capability-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 50px rgba(68, 44, 120, 0.1);
+}
+
+.capability-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  border-radius: 14px;
+  background: #eee8ff;
+  color: #7149d4;
+}
+
+.capability-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.capability-card h3 {
+  margin: 0 0 14px;
+  font-size: 1.3rem;
+  letter-spacing: -0.02em;
+}
+
+.capability-card p {
+  margin: 0;
+  color: #6c6978;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   PROCESS
+========================================================= */
+
+.solution-process {
+  padding: 120px 0;
+  background: #ffffff;
+}
+
+.solution-process-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 85px;
+  align-items: center;
+}
+
+.solution-process-image {
+  position: relative;
+  min-height: 620px;
+  overflow: hidden;
+  border-radius: 24px;
+  background-image: url("https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1400&q=85");
+  background-size: cover;
+  background-position: center;
+}
+
+.process-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(35, 20, 67, 0.1),
+    rgba(31, 18, 62, 0.9)
+  );
+}
+
+.process-image-caption {
+  position: absolute;
+  left: 38px;
+  right: 38px;
+  bottom: 38px;
+  color: #ffffff;
+}
+
+.process-image-caption span {
+  display: block;
+  margin-bottom: 14px;
+  color: #cbbcff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.process-image-caption strong {
+  display: block;
+  font-size: 1.8rem;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+}
+
+.solution-process-content h2 {
+  margin: 20px 0 25px;
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+}
+
+.solution-process-content > p {
+  margin: 0 0 35px;
+  color: #696675;
+  line-height: 1.8;
+}
+
+.process-list {
+  border-top: 1px solid #e6e1ef;
+}
+
+.process-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 19px 0;
+  border-bottom: 1px solid #e6e1ef;
+}
+
+.process-item svg {
+  flex-shrink: 0;
+  width: 20px;
+  color: #7651d6;
+}
+
+.process-item p {
+  margin: 0;
+  color: #353242;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.solution-benefits {
+  padding: 110px 0;
+  background: #f7f5fb;
+}
+
+.benefits-header {
+  max-width: 700px;
+  margin-bottom: 55px;
+}
+
+.benefits-header h2 {
+  margin: 18px 0 0;
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 70px;
+  border-top: 1px solid #ddd7e9;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  min-height: 82px;
+  border-bottom: 1px solid #ddd7e9;
+}
+
+.benefit-item svg {
+  flex-shrink: 0;
+  width: 21px;
+  color: #7651d6;
+}
+
+.benefit-item span {
+  color: #373442;
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.solution-cta {
+  padding: 100px 0;
+  background: linear-gradient(
+    135deg,
+    #241642 0%,
+    #4b2a87 52%,
+    #6d43b8 100%
+  );
+}
+
+.solution-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.solution-cta-inner > div {
+  max-width: 720px;
+}
+
+.solution-cta-inner > div > span {
+  display: block;
+  margin-bottom: 18px;
+  color: #d6c8ff;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.solution-cta h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+}
+
+.solution-cta h2 strong {
+  color: #c9b6ff;
+  font-weight: 700;
+}
+
+.solution-cta p {
+  max-width: 600px;
+  margin: 22px 0 0;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.75;
+}
+
+.solution-cta-button {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 23px;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #4b2a87;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.solution-cta-button svg {
+  width: 19px;
+}
+
+.solution-cta-button:hover {
+  color: #4b2a87;
+  transform: translateY(-3px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .solution-hero {
+    min-height: 590px;
+  }
+
+  .solution-hero-content {
+    padding: 140px 0 90px;
+  }
+
+  .solution-intro-grid,
+  .solution-process-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .solution-process-image {
+    min-height: 500px;
+  }
+
+  .capabilities-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .solution-cta-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+}
+
+
+@media (max-width: 767px) {
+
+  .custom-software-page .container {
+    width: min(100% - 30px, 1180px);
+  }
+
+  .solution-hero {
+    min-height: 570px;
+  }
+
+  .solution-hero-content {
+    padding: 130px 0 75px;
+  }
+
+  .solution-hero h1 {
+    font-size: clamp(2.7rem, 13vw, 4rem);
+  }
+
+  .solution-hero p {
+    font-size: 0.98rem;
+  }
+
+  .solution-intro,
+  .solution-capabilities,
+  .solution-process {
+    padding: 80px 0;
+  }
+
+  .solution-benefits {
+    padding: 80px 0;
+  }
+
+  .solution-intro-grid {
+    gap: 35px;
+  }
+
+  .capabilities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .capability-card {
+    min-height: auto;
+    padding: 30px;
+  }
+
+  .solution-process-image {
+    min-height: 430px;
+  }
+
+  .process-image-caption {
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+  }
+
+  .process-image-caption strong {
+    font-size: 1.45rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .benefit-item {
+    min-height: 72px;
+  }
+
+  .solution-cta {
+    padding: 75px 0;
+  }
+
+  .solution-cta-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .solution-back-link {
+    margin-bottom: 30px;
+  }
+
+  .solution-hero-content {
+    padding-top: 120px;
+  }
+
+  .solution-hero h1 {
+    font-size: 2.65rem;
+  }
+
+  .solution-intro-heading h2,
+  .solution-heading h2,
+  .solution-process-content h2,
+  .benefits-header h2 {
+    font-size: 2.25rem;
+  }
+
+  .capability-card {
+    padding: 25px;
+  }
+
+  .solution-process-image {
+    min-height: 360px;
+  }
+
+}

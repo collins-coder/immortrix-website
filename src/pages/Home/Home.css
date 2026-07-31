@@ -1,0 +1,659 @@
+/* =========================================================
+   HOME PAGE
+========================================================= */
+
+.home-page {
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   SOLUTIONS PREVIEW
+========================================================= */
+
+.home-solutions {
+  position: relative;
+  width: 100%;
+  padding: 120px 0;
+
+  background:
+    radial-gradient(
+      circle at 8% 20%,
+      rgba(126, 87, 194, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 92% 80%,
+      rgba(168, 117, 255, 0.07),
+      transparent 28%
+    ),
+    #faf8fd;
+
+  border-top: 1px solid rgba(104, 65, 145, 0.08);
+  border-bottom: 1px solid rgba(104, 65, 145, 0.08);
+}
+
+
+/* =========================================================
+   DECORATIVE BACKGROUND
+========================================================= */
+
+.home-solutions::before {
+  content: "";
+  position: absolute;
+
+  width: 320px;
+  height: 320px;
+
+  top: -150px;
+  right: -100px;
+
+  border-radius: 50%;
+
+  background: rgba(126, 87, 194, 0.08);
+
+  filter: blur(4px);
+
+  pointer-events: none;
+}
+
+.home-solutions::after {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  bottom: -100px;
+  left: -80px;
+
+  border-radius: 50%;
+
+  background: rgba(184, 143, 255, 0.08);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.home-solutions-container {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.home-solutions-header {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.15fr)
+    minmax(280px, 0.85fr);
+
+  gap: 70px;
+
+  align-items: end;
+
+  margin-bottom: 65px;
+}
+
+
+.home-solutions-heading {
+  max-width: 700px;
+}
+
+
+/* =========================================================
+   SECTION LABEL
+========================================================= */
+
+.home-section-label {
+  display: inline-flex;
+
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 20px;
+
+  color: #7951a9;
+
+  font-size: 0.78rem;
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+
+.home-section-label::before {
+  content: "";
+
+  width: 30px;
+  height: 2px;
+
+  background: #8b5fc7;
+
+  border-radius: 50px;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.home-solutions-header h2 {
+  margin: 0;
+
+  max-width: 680px;
+
+  color: #25152f;
+
+  font-size: clamp(2.3rem, 4vw, 4rem);
+
+  line-height: 1.08;
+
+  font-weight: 700;
+
+  letter-spacing: -0.045em;
+}
+
+
+.home-solutions-header h2 span {
+  display: inline;
+
+  color: #8153b3;
+}
+
+
+/* =========================================================
+   HEADER DESCRIPTION
+========================================================= */
+
+.home-solutions-header > p {
+  margin: 0;
+
+  max-width: 480px;
+
+  color: #716779;
+
+  font-size: 1rem;
+
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   SOLUTIONS LIST
+========================================================= */
+
+.home-solutions-list {
+  display: flex;
+
+  flex-direction: column;
+
+  border-top: 1px solid rgba(88, 58, 115, 0.14);
+}
+
+
+/* =========================================================
+   SOLUTION CARD
+========================================================= */
+
+.home-solution-card {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 72px minmax(0, 1fr) 60px;
+
+  align-items: center;
+
+  gap: 35px;
+
+  min-height: 145px;
+
+  padding: 30px 20px;
+
+  color: inherit;
+
+  border-bottom: 1px solid rgba(88, 58, 115, 0.14);
+
+  background: transparent;
+
+  transition:
+    background 0.35s ease,
+    padding 0.35s ease,
+    transform 0.35s ease;
+}
+
+
+.home-solution-card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 3px;
+  height: 100%;
+
+  background: #8b5fc7;
+
+  transform: scaleY(0);
+
+  transform-origin: center;
+
+  transition: transform 0.35s ease;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.home-solution-card:hover {
+  padding-left: 32px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(126, 87, 194, 0.08),
+      rgba(126, 87, 194, 0.025),
+      transparent
+    );
+}
+
+
+.home-solution-card:hover::before {
+  transform: scaleY(1);
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.home-solution-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 17px;
+
+  color: #7c4eb0;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f0e5fa,
+      #e7d7f6
+    );
+
+  border: 1px solid rgba(126, 87, 194, 0.14);
+
+  box-shadow:
+    0 8px 22px rgba(78, 45, 104, 0.08);
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    color 0.35s ease;
+}
+
+
+.home-solution-icon svg {
+  width: 25px;
+  height: 25px;
+
+  stroke-width: 1.8;
+}
+
+
+.home-solution-card:hover .home-solution-icon {
+  transform: translateY(-3px);
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #8b5fc7,
+      #a574db
+    );
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.home-solution-content {
+  min-width: 0;
+}
+
+
+.home-solution-content h3 {
+  margin: 0 0 10px;
+
+  color: #2b1938;
+
+  font-size: 1.35rem;
+
+  line-height: 1.35;
+
+  font-weight: 650;
+
+  letter-spacing: -0.02em;
+
+  transition: color 0.3s ease;
+}
+
+
+.home-solution-card:hover
+.home-solution-content h3 {
+  color: #7848aa;
+}
+
+
+.home-solution-content p {
+  max-width: 720px;
+
+  margin: 0;
+
+  color: #766d7d;
+
+  font-size: 0.95rem;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.home-solution-arrow {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  justify-self: end;
+
+  border-radius: 50%;
+
+  color: #7951a9;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(121, 81, 169, 0.18);
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease;
+}
+
+
+.home-solution-arrow svg {
+  width: 19px;
+  height: 19px;
+}
+
+
+.home-solution-card:hover .home-solution-arrow {
+  transform: rotate(45deg);
+
+  color: #ffffff;
+
+  background: #8356b6;
+
+  border-color: #8356b6;
+}
+
+
+/* =========================================================
+   IMAGE-READY DECORATIVE SUPPORT
+   ---------------------------------------------------------
+   This class can be used later if we add a real image
+   to the Home solutions section.
+========================================================= */
+
+.home-image-frame {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+
+  background: #eee7f5;
+
+  box-shadow:
+    0 25px 60px rgba(48, 28, 65, 0.12);
+}
+
+
+.home-image-frame img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.6s ease;
+}
+
+
+.home-image-frame:hover img {
+  transform: scale(1.04);
+}
+
+
+/* =========================================================
+   GENERAL HOME SECTION SPACING
+========================================================= */
+
+.home-page section {
+  width: 100%;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+
+  .home-solutions {
+    padding: 95px 0;
+  }
+
+
+  .home-solutions-header {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+    margin-bottom: 50px;
+  }
+
+
+  .home-solutions-header > p {
+    max-width: 700px;
+  }
+
+
+  .home-solution-card {
+    grid-template-columns: 64px minmax(0, 1fr) 52px;
+
+    gap: 25px;
+
+    min-height: 135px;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .home-solutions {
+    padding: 80px 0;
+  }
+
+
+  .home-solutions-container {
+    width: min(92%, 620px);
+  }
+
+
+  .home-solutions-header {
+    margin-bottom: 40px;
+  }
+
+
+  .home-section-label {
+    font-size: 0.72rem;
+
+    letter-spacing: 0.13em;
+  }
+
+
+  .home-solutions-header h2 {
+    font-size: 2.35rem;
+
+    line-height: 1.12;
+  }
+
+
+  .home-solutions-header > p {
+    font-size: 0.94rem;
+
+    line-height: 1.75;
+  }
+
+
+  .home-solution-card {
+    grid-template-columns: 52px minmax(0, 1fr);
+
+    gap: 18px;
+
+    padding: 25px 8px;
+
+    min-height: auto;
+  }
+
+
+  .home-solution-card:hover {
+    padding-left: 16px;
+  }
+
+
+  .home-solution-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 14px;
+  }
+
+
+  .home-solution-icon svg {
+    width: 21px;
+    height: 21px;
+  }
+
+
+  .home-solution-content h3 {
+    margin-bottom: 8px;
+
+    font-size: 1.08rem;
+  }
+
+
+  .home-solution-content p {
+    font-size: 0.88rem;
+
+    line-height: 1.65;
+  }
+
+
+  .home-solution-arrow {
+    display: none;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .home-solutions {
+    padding: 70px 0;
+  }
+
+
+  .home-solutions-header h2 {
+    font-size: 2rem;
+  }
+
+
+  .home-solution-card {
+    grid-template-columns: 45px minmax(0, 1fr);
+
+    gap: 15px;
+
+    padding: 23px 5px;
+  }
+
+
+  .home-solution-card:hover {
+    padding-left: 12px;
+  }
+
+
+  .home-solution-icon {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 12px;
+  }
+
+
+  .home-solution-content h3 {
+    font-size: 1rem;
+  }
+
+
+  .home-solution-content p {
+    font-size: 0.84rem;
+  }
+
+}

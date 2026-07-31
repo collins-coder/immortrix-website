@@ -128,7 +128,7 @@ ${formData.message}`;
                   </div>
 
                   <div>
-                    <span>Email us</span>
+                    <span>Email us:</span>
 
                     <strong>
                       immortrixtechnologies@gmail.com

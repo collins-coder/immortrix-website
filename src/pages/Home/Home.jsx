@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 
 import Hero from "../../components/Hero/Hero";
+import FAQ from "../../components/FAQ/FAQ";
 
 import About from "../About/About";
 import Insights from "../Insights/Insights";
@@ -61,7 +62,7 @@ function Home() {
   return (
     <div className="home-page">
 
-      <main>
+      <div className="home-main">
 
         {/* =====================================================
             HERO
@@ -74,7 +75,9 @@ function Home() {
             ABOUT PREVIEW
         ===================================================== */}
 
-        <About />
+        <div id="about">
+          <About />
+        </div>
 
 
         {/* =====================================================
@@ -163,16 +166,27 @@ function Home() {
             INSIGHTS
         ===================================================== */}
 
-        <Insights />
+        <div id="insights">
+          <Insights />
+        </div>
+
+
+        {/* =====================================================
+            FAQ
+        ===================================================== */}
+
+        <FAQ />
 
 
         {/* =====================================================
             CONTACT
         ===================================================== */}
 
-        <Contact />
+        <div id="contact">
+          <Contact />
+        </div>
 
-      </main>
+      </div>
 
     </div>
   );

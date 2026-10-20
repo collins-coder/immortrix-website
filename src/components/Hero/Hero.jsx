@@ -5,14 +5,35 @@ import {
   CheckCircle2,
 } from "lucide-react";
 
+import TypeWriter from "../TypeWriter/TypeWriter";
+import HeroSlider from "../HeroSlider/HeroSlider";
+import ParticleField from "../ParticleField/ParticleField";
+
 import "./Hero.css";
+
+const HERO_PHRASES = [
+  "your business.",
+  "your people.",
+  "your customers.",
+  "your workflows.",
+  "your growth.",
+];
+
+const MARQUEE_ITEMS = [
+  "Software Development",
+  "Business Systems",
+  "Mobile Applications",
+  "Business Automation",
+  "Digital Transformation",
+  "Data & Reporting",
+];
 
 function Hero() {
   return (
     <section className="hero-section" id="home">
 
-      {/* BACKGROUND IMAGE */}
-      <div className="hero-background"></div>
+      {/* AUTOMATIC BACKGROUND SLIDER */}
+      <HeroSlider />
 
       {/* DARK / PURPLE OVERLAY */}
       <div className="hero-overlay"></div>
@@ -20,6 +41,9 @@ function Hero() {
       {/* SUBTLE PURPLE GLOW */}
       <div className="hero-glow hero-glow-one"></div>
       <div className="hero-glow hero-glow-two"></div>
+
+      {/* MOVING PARTICLES */}
+      <ParticleField />
 
       <div className="hero-container">
 
@@ -46,8 +70,9 @@ function Hero() {
             Technology built
             <br />
 
-            <span>
-              around your business.
+            <span className="gradient-text">
+              around{" "}
+              <TypeWriter phrases={HERO_PHRASES} />
             </span>
 
           </h1>
@@ -68,7 +93,7 @@ function Hero() {
 
             <a
               href="#contact"
-              className="hero-primary-btn"
+              className="hero-primary-btn btn-shine btn-pulse"
             >
               Start a Project
               <ArrowRight />
@@ -76,7 +101,7 @@ function Hero() {
 
             <a
               href="#solutions"
-              className="hero-secondary-btn"
+              className="hero-secondary-btn btn-shine"
             >
               View Our Solutions
             </a>
@@ -88,35 +113,18 @@ function Hero() {
           <div className="hero-trust">
 
             <div className="hero-trust-item">
-
               <CheckCircle2 />
-
-              <span>
-                Business-focused solutions
-              </span>
-
+              <span>Business-focused solutions</span>
             </div>
 
-
             <div className="hero-trust-item">
-
               <CheckCircle2 />
-
-              <span>
-                Scalable technology
-              </span>
-
+              <span>Scalable technology</span>
             </div>
 
-
             <div className="hero-trust-item">
-
               <CheckCircle2 />
-
-              <span>
-                Built around your needs
-              </span>
-
+              <span>Built around your needs</span>
             </div>
 
           </div>
@@ -126,38 +134,25 @@ function Hero() {
       </div>
 
 
-      {/* BOTTOM STRIP */}
+      {/* BOTTOM STRIP: SCROLLING TICKER */}
       <div className="hero-bottom-strip">
 
-        <div className="hero-bottom-inner">
+        <div className="hero-marquee" aria-hidden="true">
 
-          <span>
-            Software Development
-          </span>
+          <div className="hero-marquee-track">
 
-          <i></i>
+            {[0, 1].map((copy) => (
+              <div className="hero-marquee-group" key={copy}>
+                {MARQUEE_ITEMS.map((item) => (
+                  <React.Fragment key={item}>
+                    <span>{item}</span>
+                    <i></i>
+                  </React.Fragment>
+                ))}
+              </div>
+            ))}
 
-          <span>
-            Business Systems
-          </span>
-
-          <i></i>
-
-          <span>
-            Mobile Applications
-          </span>
-
-          <i></i>
-
-          <span>
-            Business Automation
-          </span>
-
-          <i></i>
-
-          <span>
-            Digital Transformation
-          </span>
+          </div>
 
         </div>
 

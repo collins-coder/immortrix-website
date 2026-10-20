@@ -1,0 +1,23 @@
+.typewriter {
+  display: inline-block;
+  min-height: 1em;
+  white-space: nowrap;
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  width: 0.06em;
+  height: 0.85em;
+  margin-left: 0.06em;
+  vertical-align: -0.05em;
+  background: #cda6ed;
+  animation: typewriter-blink 0.9s steps(1) infinite;
+}
+
+@keyframes typewriter-blink {
+  50% { opacity: 0; }
+}
+
+@media (max-width: 480px) {
+  .typewriter { white-space: normal; }
+}

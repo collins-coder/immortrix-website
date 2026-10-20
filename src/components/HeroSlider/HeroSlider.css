@@ -1,0 +1,49 @@
+.hero-slider {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: opacity 1.8s ease;
+}
+
+.hero-slide.is-active {
+  opacity: 1;
+  animation: hero-slide-zoom 9s ease-out forwards;
+}
+
+@keyframes hero-slide-zoom {
+  from { transform: scale(1.02); }
+  to   { transform: scale(1.1); }
+}
+
+/* Slide: circuit-style grid */
+.hero-slide-grid {
+  background-color: #1d1029;
+  background-image:
+    linear-gradient(rgba(177, 119, 231, 0.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(177, 119, 231, 0.14) 1px, transparent 1px),
+    radial-gradient(circle at 70% 30%, rgba(154, 99, 201, 0.45), transparent 55%);
+  background-size: 56px 56px, 56px 56px, 100% 100%;
+}
+
+/* Slide: soft purple mesh */
+.hero-slide-mesh {
+  background-color: #261832;
+  background-image:
+    radial-gradient(circle at 20% 25%, rgba(182, 123, 223, 0.5), transparent 45%),
+    radial-gradient(circle at 80% 70%, rgba(110, 60, 160, 0.6), transparent 50%),
+    radial-gradient(circle at 55% 90%, rgba(201, 155, 234, 0.25), transparent 40%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide.is-active { animation: none; }
+}

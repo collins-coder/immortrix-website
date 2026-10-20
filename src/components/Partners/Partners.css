@@ -1,0 +1,137 @@
+.partners-section {
+  padding: 80px 0 90px;
+
+  background: #ffffff;
+  border-top: 1px solid #eadcf5;
+
+  overflow: hidden;
+}
+
+.partners-container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.partners-heading {
+  max-width: 640px;
+  margin: 0 auto 44px;
+
+  text-align: center;
+}
+
+.partners-label {
+  display: inline-block;
+  margin-bottom: 14px;
+
+  color: #8952c1;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.partners-heading h2 {
+  margin: 0;
+
+  color: #2b1d35;
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.partners-heading h2 span {
+  color: #8952c1;
+}
+
+/* ---------- Logo ---------- */
+
+.partner-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.partner-brand:hover {
+  transform: translateY(-4px);
+  filter: drop-shadow(0 10px 18px rgba(90, 45, 130, 0.18));
+}
+
+.partner-brand-logo {
+  flex: 0 0 auto;
+
+  height: 90px;
+  width: auto;
+  max-width: 260px;
+
+  object-fit: contain;
+}
+
+/* Only appears if a logo file is missing */
+.partner-brand-fallback {
+  color: #8952c1;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* ---------- Few partners: centred row ---------- */
+
+.partners-static {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px 72px;
+}
+
+/* ---------- Many partners: scrolling carousel ---------- */
+
+.partners-marquee {
+  overflow: hidden;
+
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.partners-track {
+  display: flex;
+  width: max-content;
+
+  padding: 14px 0;
+
+  animation: partners-scroll 45s linear infinite;
+}
+
+.partners-marquee:hover .partners-track {
+  animation-play-state: paused;
+}
+
+.partners-group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 72px;
+
+  padding-right: 72px;
+}
+
+@keyframes partners-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 576px) {
+  .partners-section {
+    padding: 64px 0 72px;
+  }
+
+  .partner-brand-logo {
+    height: 64px;
+    max-width: 200px;
+  }
+}

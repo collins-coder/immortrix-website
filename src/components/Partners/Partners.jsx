@@ -78,10 +78,7 @@ function Partners() {
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
           <span className="partners-label">OUR PARTNERS</span>
-
-          <h2>
-            Organisations we have <span>built systems for.</span>
-          </h2>
+          <h2 className= "partners-title">We are proud to work with</h2>
         </motion.div>
 
       </div>
